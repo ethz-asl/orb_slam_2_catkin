@@ -2,7 +2,7 @@
   <name>orb_slam_2_catkin</name>
   <version>0.0.0</version>
   <description>orb_slam_2_catkin</description>
-  <maintainer email="alex.millane@google.com">Alexander Millane</maintainer>
+  <maintainer email="alexander.millane@mavt.ethz.com">Alexander Millane</maintainer>
 
   <license>See package</license>
 

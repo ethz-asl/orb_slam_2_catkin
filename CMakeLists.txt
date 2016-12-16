@@ -27,7 +27,7 @@ ExternalProject_Add(orb_slam_2_src
       # Uncompressing the vocabulary
       cd ../../../Vocabulary &&
       tar -xf ../../orb_slam_2_src/Vocabulary/ORBvoc.txt.tar.gz &&
-      # Cofniguring the orb slam 2 build
+      # Configuring the orb slam 2 build
       mkdir -p ../build &&
       cd ../build &&
       cmake .. -DCMAKE_BUILD_TYPE=Release
