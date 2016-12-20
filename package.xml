@@ -1,4 +1,6 @@
-<package>
+<?xml version="1.0"?>
+<package format="2">
+
   <name>orb_slam_2_catkin</name>
   <version>0.0.0</version>
   <description>orb_slam_2_catkin</description>
@@ -12,8 +14,8 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>catkin_simple</buildtool_depend>
-  
-  <build_depend>eigen</build_depend>
-  <build_depend>pangolin_catkin</build_depend>
+
+  <depend>eigen</depend>
+  <depend>pangolin_catkin</depend>
 
 </package>
