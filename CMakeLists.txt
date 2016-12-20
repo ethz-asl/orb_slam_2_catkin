@@ -59,4 +59,5 @@ target_link_libraries(${PROJECT_NAME}
 
 cs_install()
 
-cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include)
+cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include
+          CFG_EXTRAS orb_slam_2-extras.cmake)
