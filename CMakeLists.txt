@@ -43,13 +43,19 @@ ExternalProject_Add(orb_slam_2_src
       make -j
   INSTALL_COMMAND
       cp ../orb_slam_2_src/lib/libORB_SLAM2${CMAKE_SHARED_LIBRARY_SUFFIX} ${CATKIN_DEVEL_PREFIX}/lib/ &&
-      cp -r ../orb_slam_2_src/include ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2
+      cp -r ../orb_slam_2_src/include ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2 &&
+      mkdir -p ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/DBoW2/ &&
+      cp -r ../orb_slam_2_src/Thirdparty/DBoW2/DBoW2 ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/DBoW2/ &&
+      cp -r ../orb_slam_2_src/Thirdparty/DBoW2/DUtils ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/DBoW2/ &&
+      mkdir -p ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/g2o/ &&
+      cp -r ../orb_slam_2_src/Thirdparty/g2o/g2o/ ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/g2o/ &&
+      cp -r ../orb_slam_2_src/Thirdparty/g2o/config.h ${CATKIN_DEVEL_PREFIX}/include/orb_slam_2/Thirdparty/g2o/
 )
 
 cs_add_library(${PROJECT_NAME} src/dependency_tracker.cpp)
 add_dependencies(${PROJECT_NAME} orb_slam_2_src)
 target_link_libraries(${PROJECT_NAME}
-  ${CATKIN_DEVEL_PREFIX}/lib/libORB_SLAM2${CMAKE_SHARED_LIBRARY_SUFFIX})
+  ${CATKIN_DEVEL_PREFIX}/lib/libORB_SLAM2${CMAKE_SHARED_LIBRARY_SUFFIX} ${catkin_LIBRARIES})
 
 cs_install()
 
