@@ -15,7 +15,6 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(orb_slam_2_src
   GIT_REPOSITORY git@github.com:raulmur/ORB_SLAM2.git
   UPDATE_COMMAND ""
-  PATCH_COMMAND cd ../orb_slam_2_src/ && git apply ${CMAKE_CURRENT_SOURCE_DIR}/opencv3_dep.patch
   CONFIGURE_COMMAND
       # Configuring DBoW2
       mkdir -p ../orb_slam_2_src/Thirdparty/DBoW2/build && 
