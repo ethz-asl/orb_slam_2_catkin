@@ -15,7 +15,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(orb_slam_2_src
   GIT_REPOSITORY git@github.com:raulmur/ORB_SLAM2.git
   UPDATE_COMMAND ""
-  PATCH_COMMAND patch -p0 < ${CMAKE_SOURCE_DIR}/fix_usleep.patch
+  PATCH_COMMAND patch -p1 < ${CMAKE_SOURCE_DIR}/fix_usleep.patch
   CONFIGURE_COMMAND
       # Configuring DBoW2
       mkdir -p ../orb_slam_2_src/Thirdparty/DBoW2/build && 
