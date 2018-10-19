@@ -1,0 +1,12 @@
+diff --git a/include/System.h b/include/System.h
+index b377b45..e05aa8e 100644
+--- a/include/System.h
++++ b/include/System.h
+@@ -25,6 +25,7 @@
+ #include<string>
+ #include<thread>
+ #include<opencv2/core/core.hpp>
++#include <unistd.h>
+ 
+ #include "Tracking.h"
+ #include "FrameDrawer.h"
